@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="RecipeBoard">
+ 
+	<insert id="ins_rb" parameterType="rb" keyProperty="no">
+		insert into recipeBoard 
+		(no, writerid, title, videoLink, imgIndex, imgFolder, textPack, regdate, moddate)
+		values
+		(rb_seq.nextval, #{writerid}, #{title}, #{videoLink}, #{imgIndex}, CONCAT(#{imgFolder}, TO_CHAR(rb_seq.currval)), #{textPack}, sysdate, sysdate)
+		<selectKey keyProperty="no" resultType="integer" order="AFTER">
+			select rb_seq.currval from dual
+		</selectKey>
+	</insert>
+	
+	<select id="get_total" resultType="int">
+		select count(*) from recipeBoard
+					<where>
+						<if test="searchType==''">
+						
+						</if>
+						<if test='searchType=="t"'>
+							title like #{searchText}
+						</if>
+						<if test='searchType=="w"'>
+							writerid like #{searchText}
+						</if>
+					</where>
+	</select>
+	
+	<select id="get_rb_list" resultType="rb">
+		select * from
+			(select rowNum rNum, no, writerid, title, videoLink, imgIndex, imgFolder, textPack, visiter, regdate, moddate 
+			from 
+				(select * from RECIPEBOARD 
+					<where>
+						<if test="searchType==''">
+						
+						</if>
+						<if test='searchType=="t"'>
+							title like #{searchText}
+						</if>
+						<if test='searchType=="w"'>
+							writerid like #{searchText}
+						</if>
+					</where>
+				order by no desc))
+		where rNum &gt;= #{startNum} and rNum &lt;= #{endNum}
+	</select>
+	
+	<update id="upVis">
+		update RECIPEBOARD set visiter = visiter+1 where no=#{post}
+	</update>
+	
+	<select id="get_Post" resultType="rb">
+		select * from RECIPEBOARD where no=#{post}
+	</select>
+	
+	<delete id="del_post">
+		delete from RECIPEBOARD where no=#{post}
+	</delete>
+ 
+ 	<update id="edit_post" parameterType="rb">
+ 		update recipeBoard set title=#{title}, videoLink=#{videoLink}, imgIndex=#{imgIndex}, textPack=#{textPack}, moddate=sysdate
+ 		where no=#{no}
+ 	</update>
+ 	
+ 	
+ 	<insert id="ins_comment" parameterType="rbc">
+ 		insert into recipeBoardComment values(rbc_seq.nextval, #{rno}, #{cwriterid}, #{cont}, sysdate)
+ 	</insert>
+ 	
+ 	<select id="get_totalComments" resultType="int">
+ 		select count(*) from recipeBoardComment where rno=#{post}
+ 	</select>
+ 
+ 	<select id="get_rbc_list" resultType="rbc">
+		select * 
+		from (select rowNum rNum, cno, cwriterid, cont, regdate 
+				from(select * from RECIPEBOARDCOMMENT where rno=#{rno} order by cno desc))
+		where rNum &gt;= #{startNum} and rNum &lt;= #{endNum}
+ 	</select>
+ 	
+ 	<delete id="del_comment">
+ 		delete from recipeBoardComment where cno=#{cno}
+ 	</delete>
+ 	
+ 	<select id="get_top3recipe" resultType="rb">
+	 	select * from
+			(select no, title, imgindex, imgfolder, visiter from recipeBoard order by visiter desc)
+		where rownum &lt;= 3
+ 	</select>
+ 	
+ 	<select id="get_rbList_id" resultType="rb">
+		select * from
+			(select rowNum rNum, no, writerid, title, videoLink, imgIndex, imgFolder, textPack, visiter, regdate, moddate 
+			from 
+				(select * from RECIPEBOARD where writerid = #{writerid} AND title like #{searchText}
+				order by no desc))
+		where rNum &gt;= #{startNum} and rNum &lt;= #{endNum}
+ 	</select>
+ 	
+ 	<select id="get_total_id" resultType="int">
+ 		select count(*) from recipeBoard where writerid = #{writerid} AND title like #{searchText}
+ 	</select>
+ 	
+ 	<select id="get_totalC_id" resultType="int">
+ 		select count(*) from recipeBoardComment where cwriterid = #{cwriterid} AND cont like #{searchText}
+ 	</select>
+ 	
+ 	<select id="get_rbcList_id" resultType="rbc">
+		select *
+		from(
+			select rowNum rNum, rno, ptitle, cno, regdate, cont
+			from(
+				select r.no rno, r.title ptitle, c.cno, c.regdate, c.cont
+				from(
+					select *
+					from RECIPEBOARDCOMMENT
+					where cwriterid = #{cwriterid} and cont like #{searchText}) c,
+					RECIPEBOARD r
+				where r.no = c.rno
+				order by cno desc
+				)
+			)
+		where rNum &gt;= #{startNum} and rNum &lt;= #{endNum}
+ 	</select>
+ 	
+ 	<delete id="del_comment_rno">
+ 		delete from recipeBoardComment where rno=#{post}
+ 	</delete>
+ 
+</mapper>

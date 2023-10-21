@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="HotNewsBoard">
+	<insert id="insert_hn" parameterType="hb">
+		insert into hotNewsBoard (hno, hwriter, htitle, hcont, hlink, hfile, regdate) 
+		values(hno_seq.nextval, #{hwriter}, #{htitle}, #{hcont}, #{hlink}, #{hfile}, sysdate)
+	</insert>
+	
+	<!-- 검색전 총레코드개수, 검색 이후는 검색한 레코드 개수 -->
+	<select id="count" resultType="int">
+		select count(hno) from hotNewsBoard
+		<where>
+			<if test="find_field==''"></if> <!-- 검색조건이 없는경우 -->
+			<if test="find_field=='htitle'"> <!-- 검색조건이 제목인 경우 -->	
+				htitle like #{find_name}	
+			</if>
+			<if test="find_field=='hcont'"> <!-- 검색조건이 제목인 경우 -->	
+				htitle like #{find_name}	
+			</if>
+		</where>
+	</select>
+	
+	<!-- 페이징이 적용된 게시판 목록 -->
+	<select id="list_hn" resultType="hb" parameterType="hb">
+		select * from
+		(select rowNum rNum, hno, hwriter, hlink, hfile, hcont, htitle, viewcnt, regdate from (select * from hotNewsBoard 
+		
+		<where>
+			<if test="find_field==''"></if> <!-- 검색조건이 없는경우 -->
+			<if test="find_field=='htitle'"> <!-- 검색조건이 제목인 경우 -->	
+				htitle like #{find_name}	
+			</if>
+			<if test="find_field=='hcont'"> <!-- 검색조건이 제목인 경우 -->	
+				htitle like #{find_name}	
+			</if>
+		</where>
+		
+		order by hno desc))
+ 		where rNum &gt;= #{startrow} and rNum &lt;= #{endrow} <!-- &gt;= 은 >=, &lt;= 은 <= -->
+	</select>
+	
+	<!-- 조회수 증가 -->
+ 	<update id="hit_hn" parameterType="int">
+ 		update hotNewsBoard set viewcnt=viewcnt+1 where hno=#{hno}
+ 	</update>
+ 	
+ 	<!-- 내용보기 -->
+ 	<select id="cont_hn" parameterType="int" resultType="hb">
+ 		select * from hotNewsBoard where hno=#{hno}
+ 	</select>
+ 	
+ 	<!-- 조회수순 목록 -->
+ 	<select id="list_hnv" resultType="hb">
+ 		select * from hotNewsBoard order by viewcnt desc
+ 	</select>
+ 	
+ 	<!-- 게시물 수정 -->
+ 	<update id="edit_hn">
+ 		update hotNewsBoard set htitle=#{htitle}, hcont=#{hcont}, hlink=#{hlink}, hfile=#{hfile} where hno=#{hno}
+ 	</update>
+ 	
+ 	<!-- 게시물 삭제 -->
+ 	<delete id="del_hn">
+ 		delete from hotNewsBoard where hno=#{hno}
+ 	</delete>
+ </mapper>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

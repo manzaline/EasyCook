@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="noticeBoard">
+ 	<!-- 게시판 목록 -->
+	<select id="Not_list" resultType="nb" parameterType="nb">
+		<!-- resultType은 반환 타입,parameterType은 전달인자 타입 (생략가능) -->
+		select * from
+		(select rowNum rNum,no_num,no_name,no_title,no_date
+		from noticeBoard)
+		where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+		<!-- &gt;은 ~보다 크다(>), &lt;은 ~보다 작다(<) -->
+	</select>
+
+	<!-- 검색 전후 레코드 개수 -->
+	<select id="Not_co" parameterType="nb" resultType="int">
+		select count(no_num) from noticeBoard
+		<where>
+			<if test="find_field == ''">
+				<!-- 검색조건이 없어서 총레코드 개수 -->
+			</if>
+			<if test="find_field == 'no_title'">
+				<!-- 검색 조건이 제목인 경우 -->
+				no_title like #{find_name} <!-- like는 오라클 검색 연산자 -->
+			</if>
+			<if test="find_field == 'no_cont'">
+				no_cont like #{find_name}
+			</if>
+		</where>
+	</select>
+	
+ </mapper>
+ 

@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+body{
+	background-image:url('../images/picture/food_image.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#info_update_body{/*화면 천천히 선명하게 나타내기*/
+	margin: 0px;
+	-webkit-animation: fadein 1000ms ease-out;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#panel{
+	margin: auto;
+	width: 50%;
+}
+
+#panel-body{
+	background-image:url('../images/background_mypage.jpg');
+	border-radius: 20px;
+	width: 85%;
+	margin-left: 15%;
+	margin-top: 10%;
+}
+
+#panel-header{
+	padding-top: 1.5%;
+	font-size: 250%;
+	text-align: center;
+	margin-top: 3%;
+}
+
+#update_header_title_1{
+	font-weight: bold;
+}
+
+#update_header_title_1:link{
+	text-decoration: none;
+	color: black;
+}
+
+#update_header_title_1:visited{
+	text-decoration: none;
+	color: black;
+}
+
+#update_header_title_2:hover{
+	cursor: default;
+}
+
+#panel-table{
+	padding: 3%; 
+} /* 판 내용물 */
+
+.update_title{
+} /* 각 항목 글자와 입력박스 클래스 (한줄씩) */
+
+strong{
+	margin-top: 0.7%;
+	margin-left: 5%;
+	float: left;
+	width: 25%;
+} /* 각 항목 왼쪽 글자영역 */
+
+.form-control{
+	height: 1.8em;
+	border: 1px solid #d9d9de;
+	border-radius: 5px;
+	font-size: 1em;
+} /* 각 항목 입력 박스 */
+
+.error{
+	font-size: 0.8em;
+	margin-left: 30%;
+	color: black;
+	font-weight: bold;
+	visibility: hidden;
+}
+
+#join_id_box{
+	width: 25%;
+} /* 아이디 입력박스 */
+
+#join_email_1_box{
+	width: 25%;
+} /* 이메일 입력박스 첫번째 */
+
+#join_email_2_box{
+	width: 13%;	
+} /* 이메일 입력박스 두번째 */
+
+#join_email_3_box{
+	width: 17.5%;	
+} /* 이메일 선택박스 세번째 */
+
+#join_post_box_2, #join_post_box_3{
+	margin-left: 30%;
+} /* 도로명,나머지상세주소 입력 박스*/
+
+#join_post_box_1, #join_post_box_2{
+	margin-bottom: 3.5%;
+} /*우편번호, 도로명 주소 입력칸 사이 마진*/
+
+#join_name_box{
+	width: 25%;
+} /* 이름 입력박스 */
+
+#join_nickname_box{
+	width: 25%;
+} /* 닉네임 입력박스 */
+
+#join_post_box_1{
+	width: 15%;
+} /* 우편번호 박스 */
+
+#join_post_box_2{
+	width: 40%;
+} /* 도로명 주소 박스 */
+
+#join_post_box_3{
+	width: 40%;
+} /* 나머지 상세주소 입력박스 */
+
+#clear{
+	clear: both;
+}
+
+#update_post_btn{
+	width: 25%;
+	font-size: 1.1em;
+	border-radius: 10px;
+	background: salmon;
+	font-weight: bolder;
+	cursor: pointer;
+} /* 우편번호 찾기 버튼 */
+
+#join_post_btn:hover{
+	cursor: pointer;
+	color: white;
+}
+
+#join_post_btn:active{
+	color: lightgreen;
+}
+
+#update_footer{
+	text-align: center;
+	margin-top:4%;
+} /* 판 제일 하단 가입,취소 버튼 영역*/
+
+#update_button, #delete_button, #member_del_btn{
+	width: 15%;
+	font-size: 1.2em;
+	border-radius: 10px;
+	background: salmon;
+	font-weight: bolder;
+} /* 가입하기,취소 버튼 */
+
+#update_button:hover, #delete_button:hover, #member_del_btn:hover{
+	color: white;
+	cursor: pointer;
+}
+
+#update_button:active, #delete_button:active, #member_del_btn:active{
+	color: lightgreen;
+	cursor: pointer;
+}

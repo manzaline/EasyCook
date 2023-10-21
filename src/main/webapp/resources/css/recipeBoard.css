@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+body{
+	background: #98FB98;
+	margin: 0;
+	padding: 0;
+	background-image: url("../images/recipeBoardBackground.jpg");
+	background-size: 100% 100vh;
+	background-repeat: repeat-y;
+}
+
+/*게시글 조회 페이지*/
+#PostingViewPage{
+	width: 1140px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	position: relative;
+	top: 150px;
+	background-color: #FFFAFA;
+	border-radius: 15px;
+}
+#PostingTitle{
+	text-align: center;
+	position: relative;
+    font-size: 1.6em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+#postingInfo{
+	position: relative;
+	width: 1140px;
+	height: 50px;
+	top: 20px;
+    font-size: 1.1em;
+}
+#postingWriter{
+	float: left;
+}
+#postingDate{
+	float: right;
+    margin-right: 20px;	
+}
+#postingVisiter{
+	float: right;
+}
+
+#PostingVideo{
+	position: relative;
+	top: 50px;
+	margin: 0px 0 20px 0;
+	left: 130px;
+}
+
+#postingRecipe{
+	width: 1140px;
+    margin-bottom: 100px;
+}
+
+.recipeDescriptionBox{
+    width: 1140px;
+    position: relative;
+    top: 100px;
+    margin: 20px 0px 0px 0px;
+    border-bottom: 1px solid black;
+    display: -webkit-inline-box;
+}
+.recipeDescriptionBox img{
+	float: left;
+	width: 450px;
+	height: 300px;
+}
+.recipeDescription{
+	float: right;
+	width: 650px;
+	margin-left: 40px;
+    font-size: 1.1em;
+}
+
+#postingEditRmBtn{
+    position: relative;
+    margin-bottom: 50px;
+    top: 20px;
+}
+#postingEditRmbtn input{
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #FFE4B5;
+}
+#postingEditRmbtn input:hover{
+    background-color: #FFA07A;
+}
+#postingEditRmbtn input:active{
+    background-color: #FFA07A;
+	filter: drop-shadow(0 0 3px #FF6347);
+}
+
+/*게시글 댓글 영역*/
+#commentWrap{
+	width: 1140px;
+    position: relative;
+    top: 18px;
+    margin-bottom: 25px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.commentBox{
+	width: 1100px;
+	padding: 20px;
+	min-height: 40px;
+	border-bottom: 1px solid gray;
+    display: -webkit-inline-box;
+}
+.commentWriter{
+	float: left;
+	position: relative;
+	width: 130px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	overflow: hidden;
+	margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.commentContent{
+	float: left;
+	position: relative;
+	top:10px;
+	width: 800px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.commentDate{
+	float: right;
+	position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.commentRemoveBtn{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#commentPage{
+	position: relative;
+	width: fit-content;
+	height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 30px;
+}
+.cPageNumber{
+	float: left;
+	width: 30px;
+	height: 25px;
+	text-align: center;
+	margin-left: 5px;
+	filter: drop-shadow(0 0 1px #FFFFFF);
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.cPageNumber:hover{
+	border: 1px solid #FF6347;
+	filter: drop-shadow(0 0 1px #FF6347);
+}
+.cPageNumber img{
+	width: 100%;
+	height: 100%;
+}
+
+#commentWrite{
+	width: 1098px;
+	padding: 20px;
+	min-height: 40px;
+    height: 80px;
+    background-color: #FFE4C4;
+    border-radius: 15px;
+	border: 1px solid black;
+}
+#commentWrtier{
+    float: left;
+    position: relative;
+    top: 10px;
+    width: 130px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 20px;
+}
+#commentContWrite{
+	float: left;
+    margin-right: 20px;
+}
+#commentContWrite textarea{
+	width: 800px;
+	height:80px;
+	resize: none;
+}
+#commentWriteBtn{
+	float: left;
+}
+#commentWriteBtn input{
+    width: 128px;
+    height: 80px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+#commentWriteBtn input:hover{
+	background-color: #FFFFF0;
+}
+#commentWriteBtn input:active{
+	background-color: #FFFFF0;
+	filter: drop-shadow(0 0 3px #FF6347);
+}
+
+#moveTopBtn{
+    position: absolute;
+    margin-top: 40px;
+    left: 1100px;
+}
+#moveTopBtn input{
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #FFE4B5;
+}
+#moveTopBtn input:hover{
+    background-color: #FFA07A;
+}
+#moveTopBtn input:active{
+    background-color: #FFA07A;
+	filter: drop-shadow(0 0 3px #FF6347);
+}
+
+
+
+/*게시글 검색 영역*/
+#RecipieSearchPage{
+	width: 1200px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 230px;
+	position: relative;
+    overflow: hidden;
+	top: 200px;
+}
+#Board_blur{
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+	background-color: #252525;
+	opacity: 0.3;
+	z-index: 100;
+	border-radius: 15px;
+}
+
+/*검색된 게시글*/
+#Board_Recipies{
+	position: relative;
+	width: 100%;
+	height: 90%;
+	z-index: 200;
+}
+.BoardPostings{
+	float: left;
+	width: 270px;
+	height: 235px;
+	margin: 15px;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+}
+.BoardPostThumbnail{
+	position: absolute;
+	opacity: 0.3;
+	width: 270px;
+	height: 235px;
+	background-image: url("../images/recipePostBasicThumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+	border-radius: 15px;
+}
+.BoardPostTitle{
+	position: absolute;
+	margin: 30px 15px 0px 15px;
+	width: 240px;
+    height: 29px;
+    color: #252525;
+    font-size: 1.3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+	z-index: 300;
+}
+.BOardPostWriter{
+    position: absolute;
+    margin: 4px 15px 0px 15px;
+    width: 240px;
+    height: 29px;
+    color: #252525;
+    font-size: 0.9em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 300;
+}
+.BoardPostCont{
+	position: absolute;
+	margin: 70px 15px 0px 15px;
+	width: 240px;
+	height: 130px;
+    color: #252525;
+    font-size: 1em;
+	word-wrap: break-word;
+	display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+	overflow: hidden;
+	z-index: 300;
+}
+.BoardVisiter{
+    position: absolute;
+    margin: 210px 0px 0px 15px;
+    color: #252525;
+    font-size: 0.9em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 300;
+}
+
+/*하단 페이지 번호*/
+
+#bottomPageNumber{
+	position: relative;
+	width: fit-content;
+	height: 25px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	align-content: center;
+	z-index: 300;
+}
+
+.PageNumber{
+	float: left;
+	width: 30px;
+	height: 25px;
+	text-align: center;
+	margin-left: 5px;
+	filter: drop-shadow(0 0 1px #FFFFFF);
+	border: 1px solid white;
+	border-radius: 5px;
+}
+.PageNumber:hover{
+	border: 1px solid #FF6347;
+	filter: drop-shadow(0 0 1px #FF6347);
+}
+.PageNumber img{
+	width: 100%;
+	height: 100%;
+}
+/*검색영역*/
+#table-form{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*글쓰기 버튼*/
+#postWriteBtn{
+    width: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 500px;
+    margin-bottom: 50px;
+}
+#postWriteBtn input{
+    width: 100px;
+    height: 30px;
+    color: black;
+    font-size: 1.1em;
+    background-color: white;
+    border-radius: 10px;
+}
+#postWriteBtn input:hover{
+    background-color: #FFFFE0;
+}
+#postWriteBtn input:active{
+    background-color: #FFFFE0;
+	filter: drop-shadow(0 0 3px #FF6347);
+}

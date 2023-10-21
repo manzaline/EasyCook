@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="adminNotice">
+	
+	<!-- 검색전후 공지목록 -->
+  <select id="adnot_list" resultType="an">
+    select * from 
+     (select rowNum rNum,adminnotice_no,adminnotice_name,adminnotice_title,
+     adminnotice_date,adminnotice_cont
+     from (select * from adminNotice     
+     <where>
+     <if test="find_field == ''">
+      <!-- 검색조건이 없어서 총레코드 개수 -->
+     </if>
+     <if test="find_field == 'adminnotice_title'">
+      <!-- 검색 조건이 제목인 경우 -->
+      adminnotice_title like #{find_name} <!-- like는 오라클 검색
+      연산자 -->
+     </if>
+     <if test="find_field == 'adminnotice_cont'">
+      adminnotice_cont like #{find_name}
+     </if>
+     </where>     
+      order by adminnotice_no desc)) 
+     where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+   <!-- &gt;은 ~보다 크다(>), &lt;은 ~보다 작다(<) -->  
+  </select> 
+
+	<!-- 검색 전후 레코드 개수 -->
+	<select id="adnot_count" parameterType="an" resultType="int">
+		select count(adminnotice_no) from adminNotice
+		<where>
+			<if test="find_field == ''">
+				<!-- 검색조건이 없어서 총레코드 개수 -->
+			</if>
+			<if test="find_field == 'adminnotice_title'">
+				<!-- 검색 조건이 제목인 경우 -->
+				adminnotice_title like #{find_name} <!-- like는 오라클 검색 연산자 -->
+			</if>
+			<if test="find_field == 'adminnotice_cont'">
+				adminnotice_cont like #{find_name}
+			</if>
+		</where>
+		
+	</select>
+
+	<insert id="adnot_in" parameterType="an">
+		insert into adminNotice
+		(adminnotice_no,adminnotice_name,adminnotice_title,
+		adminnotice_cont,adminnotice_date)
+		values(adminnotice_no_seq.nextval,#{adminnotice_name},#{adminnotice_title},
+		#{adminnotice_cont},sysdate)
+	</insert>
+
+	<update id="adnot_up">
+		update adminNotice set
+		adminnotice_title=#{adminnotice_title},
+		adminnotice_cont=#{adminnotice_cont} where
+		adminnotice_no=#{adminnotice_no}
+	</update>
+
+	<delete id="adnot_del" >
+    	 delete from adminNotice where adminnotice_no=#{no}
+    </delete>
+    
+    <select id="adnot_cont" resultType="an">
+    	select * from adminNotice where adminnotice_no=#{adminnotice_no}
+    </select>
+
+</mapper>
+ 

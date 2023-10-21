@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd" >
+
+<configuration> 
+
+   <typeAliases>
+   
+      <!-- 빈 클래스 객체 생성 -->
+       <typeAlias type="net.easycook.vo.RecipeBoardVO" alias="rb"/>
+       
+       <typeAlias type="net.easycook.vo.RecipeBoardCommentVO" alias="rbc"/>
+       
+       <typeAlias type="net.easycook.vo.NoticeBoardVO" alias="nb"/>
+       
+       <typeAlias type="net.easycook.vo.FaqBoardVO" alias="fb"/>
+       
+       <typeAlias type="net.easycook.vo.AdminNoticeVO" alias="an"/>
+       
+       <typeAlias type="net.easycook.vo.AdminFaqVO" alias="af"/>
+       
+       <typeAlias type="net.easycook.vo.HotNewsBoardVO" alias="hb"/>      
+       
+       <typeAlias type="net.easycook.vo.AdminVO" alias="admin"/> 
+       
+       <typeAlias type="net.easycook.vo.MemberVO" alias="m" />
+       
+   </typeAliases>
+   
+</configuration>

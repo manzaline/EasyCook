@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+#admin_body {
+	background-image:url('../images/picture/food_image.jpg');
+	background-repeat:no-repeat;
+	background-size:100% 100vh;
+	margin: 0%;
+}
+
+#admin_header {
+	text-align: center;
+	padding: 1%;
+/* 	background: peachpuff; */
+	width: 50%;
+	margin:0 5% 0 30%;
+}
+
+#admin_panel {
+	width: 50%;
+/*  	background: #f5f5f5;  */
+	padding: 1%;
+	margin:0 5% 0 30%;
+}
+
+#admin_search {
+/* 	border: 1px solid red; */
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+#admin_list_table th{
+	border-bottom-style: solid;
+	border-bottom-width: 2px;	
+}
+
+
+
+#admin_list_table td{
+	text-align: center; 
+	padding: 6px 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+}
+
+#admin_member_list{
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+}
+
+#a_id{
+	text-align: center;
+	padding-left: 14px;
+	overflow: hidden; 
+	text-overflow: ellipsis;/*생략부호*/
+	white-space: nowrap;
+}
+
+#admin_cont {
+ 	
+	padding: 20px;
+	background: #f5f5f5; 
+	flex-wrap:wrap;
+/* 	padding-left: 9%; */
+}
+
+.admintitle {
+	
+	display:flex;
+	padding:20px;
+	background-color:#cccdd0;
+	flex-wrap:wrap;
+	font-weight: bold;
+}
+
+#title2{
+	padding-left: 5%;
+}
+
+#con2{
+	padding-left: 6%;
+}
+
+.admintitle [id*="title"]{
+	/*margin:0px 5% 0px 10%;*/
+	width:17%;
+	text-align:center;
+	margin-left: 1%;
+}
+
+/* 버튼 */
+.admin_button{
+	margin:0px 0px 0px 0px;
+}
+
+#admin_cont_title {
+/* 	border: 2px solid yellow; */
+	margin-bottom: 2%;
+	font-size: 120%;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+/* 내용바 */
+#admin_cont_list{
+	flex-wrap:wrap;
+	background-color:#f5f5f5;
+	line-height: center;
+}
+/* 내용들 */
+#admin_cont_list [id*="con"]{
+	/*margin:0px 5% 0px 10%;*/
+	width:18%;
+	text-align:center;
+	float: left;
+}
+
+#admin_button{
+	border-bottom:1px dotted;	
+	margin-top: 15px;
+	padding-bottom:15px;
+}
+
+#con4{
+	/* margin-left:1%; */
+}
+
+#con5{
+	margin-right: 6%;
+} 
+
+.a_title{
+	float: left;
+	width: 20%;	
+}
+.a_text{
+	float: left;
+	width: 20%;
+/* 	border-bottom-style: dotted; */
+}
+
+/* #admin_cont_list b {
+	margin-right: 10%;
+} */
+
+#admin_member {
+	width: 40%;
+	margin:0 5% 0 35%;
+	padding: 1%;
+/* 	margin-top: 2%; */
+	border-radius: 20px;
+}
+
+#info_title{
+	font-size: 150%;
+	font-weight: bold;
+}
+
+#admin_member_header{
+	text-align: center;
+	padding: 15px;
+	background: #cccdd0;
+}
+
+#admin_member_cont{
+ 	padding: 30px;
+ 	background-color:#f5f5f5;
+ 	padding-left: 50px;
+}
+
+#join_email_1_box{
+	width: 20%;
+}
+
+#join_email_2_box{
+	width: 15%;
+}
+
+#join_email_3_box{
+	width: 20%;
+}
+
+#join_tel_1_box{
+	width: 10%;
+}
+
+#join_tel_2_box{
+	width: 10%;
+}
+
+#join_tel_3_box{
+	width: 10%;
+}
+
+#join_post_box_1{
+	width: 30%;
+}
+
+.member_text{
+	float: left;
+	width: 37%;
+	font-size: 120%;
+}
+
+#admin_member_pwd{
+	text-align: center;	
+	padding-bottom: 25px;
+ 	background-color:#f5f5f5;
+}
+
+#admin_member_edit{
+	float: left;
+}
+
+.member_info{
+	width: 50%;
+	font-size: 120%;
+}
+
+#edit_info{
+	margin-left: 43%;
+	background-color:#f5f5f5;
+}
+
+#admin_member_set{
+	margin-left: 5%;
+}
+
+#del_member{
+
+	background-color:#f5f5f5;
+}
+
+#member_button{
+	text-align: center;
+ 	background-color:#f5f5f5;
+  	padding-bottom: 20px;
+}
+
+#admin_info_close{
+	padding-top: 10px;
+	text-align: center;
+ 	background-color:#f5f5f5;
+ 	padding-bottom: 20px;
+}
+
+#admin_page_number {
+	margin: 10px 0 10px 0;
+	font-weight: bold;
+}
+
+#admin_page_number a:link {
+	color: black;
+	text-decoration: none;
+}
+
+#admin_page_number a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+#admin_page_number a:active {
+	color: aqua;
+	text-decoration: none;
+}

@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* 상단 제목 */
+.top_title .h1{
+   color: #ffa315;
+   font-size: 250%;
+   text-align:center;
+    text-shadow: 1px 1px #000000;
+    background-color: #fffcbd;
+   margin: 0;
+   padding: 10px;
+}
+.board_title{
+   color: #ffa315;
+   font-size: 250%;
+   text-align:center;
+    text-shadow: 1px 1px #000000;
+    background-color: #fffcbd;
+   margin: 0;
+   padding: 10px;
+    border-bottom: 4px solid orange;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+}
+.top_title hr{
+   border: 2px solid orange;
+   margin: 0;
+}
+
+#page_blur{
+	display: none;
+	position: fixed; 
+	top: 0%; 
+	left: 0%; 
+	background: #000000; 
+	z-index: 1000; 
+}
+/* 상단 메뉴바 */
+#top_menubar{
+	position: fixed;
+	width: 100%;
+	z-index: 2000; 
+}
+#top_login_join_btn{
+	float: right;
+	margin: 20px 60px 0 0;
+}
+#top_login_join_btn a{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	text-shadow: 0 0 3px black;
+}
+#top_login_join_btn a:hover{
+	color: #F90;
+}
+#top_login_join_btn a:active{
+	color: #FF6347;
+}
+#top_search_icon{
+	float: right;
+	margin: 5px 10px 0 0;
+	filter: drop-shadow(0 0 2px white);
+	z-index: 2000; 
+}
+#top_search_icon:hover{
+	cursor: pointer;
+	filter: drop-shadow(0 0 2px #F90);
+}
+#top_search_icon:active{
+	cursor: pointer;
+	filter: drop-shadow(0 0 2px #FF6347);
+}
+#top_search_hide{
+	width: 0;
+	height: 80px;
+	margin: 15px 5px 0 0;
+}
+#top_search{
+	float: right;
+	width: 50%;
+	height: 40px;
+	margin: 15px 15px 0 0;
+}
+#top_search_input{
+	float: right;
+	border-radius: 15px;
+	margin: 5px 10px 0 0;
+	width: 0;
+	height: 25px;
+	opacity: 0;
+}
+#top_search_input:focus{
+	outline: none;
+}
+
+/* 좌측 메뉴바 */
+#left_menubar{
+	position: fixed;
+	z-index: 2000; 
+}
+#left_menubtn{
+	position: fixed;
+	float: left;
+	filter: drop-shadow(0 0 2px black);
+	margin: 20px 0 0 20px;
+}
+#left_menubtn img:hover{
+	filter: drop-shadow(0 0 8px #F90);
+	cursor: pointer;
+}
+#left_menubtn img:active{
+	filter: drop-shadow(0 0 10px #FF6347);
+	cursor: pointer;
+}
+#left_menu{
+	position: fixed;
+	float: left;
+	background-color: #FFFFFF;
+	opacity: 0;
+	width: 0%;
+	height: 499px;
+	left: -100px;
+}
+#left_logo{
+	position: absolute;
+	width: 100%;
+	height: 180px;
+}
+#left_logo img{
+	position: absolute;
+	width: 80%;
+	height: 144px;
+	padding: 30px;
+	filter: drop-shadow(0 0 1px #000000);
+}
+#left_sessionInfo{
+	position: absolute;
+	width: 90%;
+	height: 50px;
+	margin: 200px 0 0 0;
+	text-align: center;
+	font-size: 1.1em;
+	filter: drop-shadow(0 0 1px #505050);
+    user-select: none;
+    padding: 15px;
+}
+#left_menuclosebtn{
+	position: absolute;
+	filter: drop-shadow(0 0 2px black);
+	margin: 10px 0 0 102%;
+}
+#left_menuclosebtn img:hover{
+	filter: drop-shadow(0 0 8px #F90);
+	cursor: pointer;
+}
+#left_menuclosebtn img:active{
+	filter: drop-shadow(0 0 10px #FF6347);
+	cursor: pointer;
+}
+#left_menulink{
+	position: absolute;
+	background-color: #FFFFFF;
+	margin: 280px 0 0 0;
+	width: 100%;
+	height: 215px;
+	border-top: 2px solid #000000;
+	border-bottom: 2px solid #000000;
+	filter: drop-shadow(0 0 1px #505050);
+}
+#left_notice, #left_board, #left_news, #left_faq{
+    width: 85%;
+    padding: 10px;
+    height: 33px;
+    margin-left: 12px;
+	border-bottom: 1px solid #000000;
+	filter: drop-shadow(0 0 1px #505050);
+}
+#left_menulink img{
+	float: right;
+}
+#left_menulink a{
+	text-decoration: none;
+	color: #252525;
+	font-size: 1.5em;
+}
+#left_menulink a:hover{
+	color: #F90;
+}
+#left_menulink a:active{
+	color: #FF6347;
+	filter: drop-shadow(0 0 10px #FF6347);
+}
+/*
+#left_notice a, #left_board a, #left_news a, #left_faq a{
+	text-decoration: none;
+	color: #252525;
+	font-size: 1.5em;
+}
+#left_notice a:hover, #left_board a:hover, #left_news a:hover, #left_faq a:hover{
+	color: #F90;
+}
+#left_notice a:active, #left_board a:active, #left_news a:active, #left_faq a:active{
+	color: #FF6347;
+	filter: drop-shadow(0 0 10px #FF6347);
+}
+*/

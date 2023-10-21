@@ -1,0 +1,394 @@
+@charset "UTF-8";
+
+#login_body{
+	margin: 0;
+/* 	margin-top: 10%; */
+	-webkit-animation: fadein 1000ms ease-out;
+	background-image: url("../images/vegetable3.jpeg");
+}
+
+#panel_login{
+	width: 50%;
+	margin-left: 32%;
+	margin-top: 0;
+	position: absolute;
+	display: flex;
+}
+
+#panle_body_login{
+	background: rgba(255, 201, 173);
+	border-radius: 20px;
+	width: 70%;
+	margin-top: 5%;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#panel_header_login{
+	padding-top: 1.5%;
+	font-size: 300%;
+	text-align: center;
+	margin-top: 3%;
+/* 	border: 1px solid lightgreen; */
+}
+
+#panel_header_login a{
+	font-weight: bold;
+}
+
+#panel_header_login a:link{
+	text-decoration: none;
+	color: black;	
+}
+
+#panel_header_login a:visited{
+	text-decoration: none;
+	color: black;	
+}
+
+#login_header_title:hover{
+	cursor: default;
+}
+
+#panel_table_login{
+	padding: 3%;
+/* 	border: 1px solid orange; */
+}
+
+.login_title{
+	margin-bottom: 7%;
+}
+
+strong{
+	margin-top: 0.5%;
+	margin-left: 20%;
+	float: left;
+	width: 25%;
+	font-size: 150%;
+} 
+
+.login_control{
+	border: 1px solid #d9d9de;
+	border-radius: 5px;	
+	height: 2em;
+	font-size: 1em;
+}
+
+#login_id_box{
+	width: 35%;
+}
+
+#login_pwd_box{
+	width: 35%;
+}
+
+#login_footer{
+	text-align: center;
+/* 	border: 1px solid blue; */
+}
+
+#login_button, #join_button_login{
+	width: 25%;
+	font-size: 1.5em;
+	border-radius: 10px;
+	background: #FFB791;
+	font-weight: 500;
+}
+
+#login_button:hover, #join_button_login:hover{
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+#login_button:active, #join_button_login:active{
+	color: lightblue;
+	font-weight: 500;
+}
+
+#clear{
+	clear: both;
+}
+
+/* 아이디, 비밀번호 찾기 영역*/
+
+#login_find{
+	text-align: center;
+/* 	border: 1px solid red; */
+	padding-bottom: 2%;
+}
+
+#login_find_id_text:hover, #login_find_pwd_text:hover{
+	cursor: pointer;
+	color: orange;
+	text-decoration: underline;
+}
+
+#login_find_id_text{
+	margin-left: 5%;
+}
+
+#login_find_pwd_text{
+	margin-left: 17%;
+}
+
+#login_find_id {
+	margin-bottom: 5%;
+	border-radius: 20px;
+	display: none;
+	position: absolute;
+	width: 70%;
+	margin-top: 50%;
+	background: rgba(255, 206, 202);
+}
+
+#login_find_id_header{
+	padding-top: 1.5%;
+	font-size: 300%;
+	text-align: center;
+/* 	border: 1px solid lightgreen;	 */
+}
+
+#login_find_id_header a{
+	font-weight: bold;
+	color: black;	
+}
+
+#login_find_id_header a:link{
+	text-decoration: none;
+}
+
+#login_find_id_header a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+#login_find_id_title:hover{
+	cursor: default;
+}
+
+#login_find_id_table{
+/* 	border: 2px solid yellow; */
+	padding: 3%;
+}
+
+.login_find_id_control{
+	height: 2em;
+	font-size: 1em;
+	border: 1px solid #d9d9de;
+	border-radius: 5px;	
+}
+
+#login_find_id_q{
+	margin-bottom: 5%;
+}
+
+#login_find_id_tel{
+	margin-bottom: 5%;
+}
+
+#find_q {
+	margin-top: 1%;
+	margin-left: 7%;
+	float: left;
+	width: 30%;
+	font-size: 120%;
+	margin-right: 5%;
+}
+
+#find_tel{
+	margin-top: 1%;
+	margin-left: 7%;
+	float: left;
+	width: 35%;
+	font-size: 120%;	
+}
+
+#login_find_id_q_a {
+	margin-right: 7%;
+	width: 43%;
+}
+
+#login_find_button{
+	text-align: center;
+/* 	border: 1px solid blue; */
+	margin-bottom: 0%;
+}
+
+#login_find_button_id_title:hover, #login_find_button_login_title:hover{
+	cursor: pointer;
+	color: white;
+	font-weight: 500;
+}
+
+#login_find_button_id_title:active, #login_find_button_login_title:active{
+	color: lightblue;
+}
+
+#login_find_id_real{
+	background: #FF4674;
+	display: none;
+	text-align: center;
+	margin-top: 3%;
+}
+
+
+#login_find_button_id_title{
+	font-size: 1.2em;
+	border-radius: 10px;
+	background: #FF86A4;
+	font-weight: 400;
+}
+
+ /********** 비밀번호 찾기 영역 ************/
+ 
+ #login_find_pwd_header{
+	font-size: 300%;
+	text-align: center;
+/* 	border: 1px solid red; */	
+	padding-top: 1.5%;
+}
+
+#login_find_pwd_header a{
+	font-weight: bold;
+	color: black;	
+}
+
+#login_find_pwd_header a:link{
+	text-decoration: none;
+}
+
+#login_find_pwd_header a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+#login_find_pwd_title:hover{
+	cursor: default;
+}
+
+#login_find_pwd_table{
+/* 	border: 2px solid orange; */
+	padding: 3%;
+}
+
+.login_find_pwd_control{
+	height: 2em;
+	border: 1px solid #d9d9de;
+	border-radius: 5px;
+	font-size: 1em;	
+}
+
+#login_find_pwd_id{
+	margin-bottom: 5%;
+}
+
+#find_pwd_id_title {
+	margin-top: 2%;
+	margin-left: 7%;
+	float: left;
+	width: 40%;
+	font-size: 120%;
+}
+
+#login_find_pwd_id_text {
+	margin-right: 7%;
+	width: 43%;
+}
+
+#login_find_pwd_q{
+	margin-bottom: 5%;
+}
+
+#find_pw_q {
+	margin-top: 1.5%;
+	margin-left: 7%;
+	float: left;
+	width: 35%;
+	font-size: 120%;
+	margin-right: 5%;
+}
+
+#login_find_pwd_q_a{
+	margin-right: 7%;
+	width: 43%;
+}
+
+#login_find_pwd_newpwd{
+	margin-bottom: 5%;
+}
+
+#find_pwd_newpwd{
+	margin-top: 1.5%;
+	margin-left: 7%;
+	float: left;
+	width: 35%;
+	font-size: 120%;
+	margin-right: 5%;	
+}
+
+#login_find_pwd_newpwd_box{
+	margin-right: 7%;
+	width: 43%;	
+}
+
+#login_find_pwd_newpwd_check{
+	margin-bottom: 5%;
+	font-size: 120%;	
+}
+
+#find_pwd_newpwd_check{
+	margin-top: 2%;
+	margin-left: 7%;
+	float: left;
+	width: 40%;
+	font-size: 100%;	
+}
+
+#login_find_pwd_tel_box{
+	margin-right: 7%;
+	width: 43%;	
+}
+
+#login_find_button_pwd{
+	text-align: center;
+/* 	border: 1px solid blue; */
+}
+
+#login_find_button_pwd_title:hover{
+	cursor: pointer;
+	color: white;
+	font-weight: 500;
+}
+
+#login_find_button_pwd_title:active{
+	color: lightblue;
+}
+
+
+#login_find_pwd {
+	margin-bottom: 5%;
+	border-radius: 20px;
+	display: none;
+	position: absolute;
+	width: 70%;
+	margin-top: 5%;
+	background: rgba(222, 208, 255);
+	margin-top: 50%;
+}
+
+#login_find_button_pwd_title{
+	font-size: 1.2em;
+	border-radius: 10px;
+	background: #CEBAFF;
+	font-weight: 400;
+}
+
+ }

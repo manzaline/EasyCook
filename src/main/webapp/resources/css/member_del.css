@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+#mDel_wrap{
+	margin:auto;
+	width: 40%;
+	background-color:#b5f5c6;
+	height:450px;
+	border-radius:10px;
+	margin-top:3%;
+}
+.mDel_title{
+	text-align:center;
+	margin-left:-3%;
+}
+#mDel_t{
+	margin-left:3%;
+	
+}	
+#mDel_t th{
+	font-size: 120%;
+	margin-top:2%;
+}
+#mDel_t td{
+	font-size: 120%;
+}
+#del_pwd{
+	font-size: 120%;
+	margin-top:2%;
+}
+#del_cont{
+	font-size: 120%;
+	margin-top:2%;
+}
+#mDel_menu{
+	margin-top:2%;
+	margin-left:3%;
+}
+
+#mDel_btn, #mDel_reset_btn{
+	background-color:white;
+	border-radius:10px;
+	width:15%;
+	height:35px;
+	border:2px solid black;
+	font-size: 110%;
+}
+
+#mDel_btn:hover, #mDel_reset_btn:hover{
+	cursor: pointer;
+}
