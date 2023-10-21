@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+#noticebody {
+	background-image:url('../images/picture/food_image.jpg');
+	background-repeat:no-repeat;
+	background-size:100% 100vh;
+	margin: 0%;
+}
+
+#noticeheader {
+	text-align: center;
+	padding: 1%;
+	width: 60%;
+	margin:0 5% 0 30%;
+}
+
+#notice_panel {
+	width: 60%;
+	padding: 1%;
+	margin:0 5% 0 30%;
+}
+
+#notice_search {
+/* 	border: 1px solid red; */
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+#notice_search b {
+	font-size: 150%;
+}
+
+
+#notice_list_table th{
+	border-bottom-style: solid;
+	border-bottom-width: 2px;	
+}
+
+
+#notice_list_table td{
+	text-align: center; 
+	padding: 6px 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+}
+
+
+#notice_cont {
+/* 	margin-left: 4%; */
+	padding: 20px;
+	background: #f5f5f5; 
+	flex-wrap:wrap;
+/* 	padding-left: 9%; */
+}
+
+.noticetitle {
+	display:flex;
+	padding:20px;
+	background-color:#cccdd0;
+	flex-wrap:wrap;
+}
+
+.noticetitle [id*="title"]{
+	/*margin:0px 5% 0px 10%;*/
+	width:19%;
+	margin-left: 1%;
+}
+
+/* 버튼 */
+.admin_button{
+	margin:0px 0px 0px 0px;
+}
+
+#notice_cont_title {
+/* 	border: 2px solid yellow; */
+	margin-bottom: 2%;
+	font-size: 120%;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+/* 내용바 */
+#notice_cont_list{
+	flex-wrap:wrap;
+	background-color:#f5f5f5;
+	line-height: center;
+}
+
+/* 내용들 */
+#notice_cont_list [id*="con"]{
+	/*margin:0px 5% 0px 10%;*/
+	width:20%;
+	float: left;
+}
+#notice_cont_list .admin_button {
+	margin:0px 21%;
+}
+#admin_button{
+	border-bottom:1px dotted;	
+	margin-top: 15px;
+	padding-bottom:15px;
+}
+
+
+
+#admin_page_number {
+	margin: 10px 0 10px 0;
+	font-weight: bold;
+}
+
+#admin_page_number a:link {
+	color: black;
+	text-decoration: none;
+}
+
+#admin_page_number a:hover {
+	color: gray;
+	text-decoration: underline;
+}
+
+#admin_page_number a:active {
+	color: aqua;
+	text-decoration: none;
+}

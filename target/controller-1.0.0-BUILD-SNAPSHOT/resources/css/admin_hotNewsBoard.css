@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------list------------------------------------------------ */
+body{ /*list, input, edit 공통 */
+	background-image:url('../images/picture/food_image.jpg');
+	background-repeat: no-repeat;
+	background-size:100% 100vh;
+	margin: 0%;
+}
+#hn_admin_write_body, #hn_admin_edit_body{
+	background-image:url('../images/picture/food_image.jpg');
+	background-repeat: no-repeat;
+	background-size:100% 100vh;
+	margin: 0%;
+}
+
+a { 
+	text-decoration:none;
+	color: black; 
+} 
+a:hover{
+	color: gray;
+}
+a:active{
+	color: red;
+}
+
+#admin_header {
+	text-align: center;
+	padding: 1%;
+/* 	background: peachpuff; */
+	width: 50%;
+	margin:0 5% 0 30%;
+}
+
+#admin_panel { /*list, input, edit 공통 */
+	width: 50%;
+	padding: 1%;
+	margin:15px 5% 0 30%;
+	min-width: 691px;
+}
+
+#admin_search{
+	text-align: center;
+	margin-bottom: 2%;	text-align: center;	
+}
+#admin_hn_write{
+	float: right;	
+}
+
+admin_hn_list_table{
+	margin-bottom: -1px
+}
+
+#admin_hn_list_table th{
+	background-color: #cccdd0;	
+}
+#admin_hn_list_table td{
+	background-color:#f5f5f5;	
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;	
+}
+#admin_hn_list_table > tr, td, th{
+	padding: 13px 4px;
+}
+#admin_list_no{
+	min-width: 40px;
+}
+#admin_list_title{
+	width: 100%;
+	letter-spacing: 0.5em;
+}
+#admin_list_writer{
+	min-width: 50px;
+}
+#admin_list_date{
+	min-width: 84px;
+}
+#admin_list_viewcnt{
+	width: 4%;
+	min-width: 48px;
+}
+#admin_list_controller{
+	min-width:91px;
+}
+
+
+
+#admin_hn_list > td > #left{
+	text-align: left;
+	padding-left: 14px;
+	width: 20em;
+}
+
+
+#bList_paging {
+	padding: 10px 0 0 0;
+	height: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* -------------------------------------------- 핫뉴스 등록 -------------------------------------------- */
+#admin_hn_button_wrap{
+	text-align: center;
+	margin: 10px 0 0 0;	
+}
+#thumbnail_container{
+	width: 100px; height: 100px;
+}
+#admin_hn_write_table{
+	margin-left: auto; margin-right: auto;
+}
+#admin_hn_write_table th{
+	background-color: #cccdd0;		
+}
+#admin_hn_write_table td{
+	background-color:#f5f5f5;		
+}
+
+/* -------------------------------------------- 핫뉴스 수정 -------------------------------------------- */
+
+
+/* -------------------------------------------- input, edit 공통 -------------------------------------------- */
+

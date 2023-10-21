@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+body{
+	background: #98FB98;
+	margin: 0;
+	padding: 0;
+	background-image: url("../images/recipeBoardBackground.jpg");
+	background-size: 100% 100vh;
+	background-repeat: repeat-y;
+}
+
+#writeFormWrap{
+	width: 740px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 300px;
+	position: relative;
+    overflow: hidden;
+	top: 150px;
+	background-color: #FFE4C4;
+	border-radius: 15px;
+}
+#recipeInsertForm{
+	width: 740px;
+	position: relative;
+}
+
+#title{
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    user-select: none;
+}
+#title input{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+#video{
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    user-select: none;
+}
+#video input{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+#thumbnail{
+    width: 100%;
+    height: 500px;
+    user-select: none;
+}
+
+
+#recipeContWrap{    
+	width: 100%;
+}
+
+#contTitle{
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+#addContWrap{
+    margin-top: 30px;
+    width: 115px;
+    height: 30px;
+}
+#addContWrap:hover{
+	cursor: pointer;
+}
+#addContWrap:active{	
+	filter: drop-shadow(0 0 4px #FF6347);
+	cursor: pointer;
+}
+#addContBtn{
+	float: left;
+}
+#addContLabel{
+	float: left;
+    font-size: 1.2em;
+    margin-left: 5px;
+    user-select: none;
+}
+
+.recepeCont{
+	width: 100%;
+	height: 300px;
+	margin-top: 30px;
+}
+
+.removeContWrap{
+    margin-top: 30px;
+    position: relative;
+    left: 620px;
+    width: 95px;
+    height: 30px;
+}
+.removeContWrap:hover{
+	cursor: pointer;
+}
+.removeContWrap:active{	
+	filter: drop-shadow(0 0 4px #FF6347);
+	cursor: pointer;
+}
+
+.removeContLabel{
+	float: right;
+    font-size: 1.2em;
+    margin-left: 5px;
+    user-select: none;
+}
+.removeContBtn{
+	float: right;
+}
+
+.contWrap{
+	width: 740px;
+    height: 270px;
+    background-color: #E1C29A;
+    border-radius: 30px;
+}
+
+.contImg{
+    float: left;
+    width: 200px;
+    height: 170px;
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+.contImg:hover{
+	width: 198px;
+	cursor: pointer;
+	border: 1px solid black;
+}
+.contImg:active{
+	width: 198px;
+	cursor: pointer;
+	filter: drop-shadow(0 0 4px #FF6347);
+}
+.contText{
+    float: left;
+    resize: none;
+    width: 500px;
+    margin-left: 20px;
+    height: 200px;
+    position: relative;
+    top: 35px;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+
+#SendButtonWrap{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: -webkit-center;
+}
+#writeBtn{
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 60px;
+    background-color: #E0FFFF;
+    border: none;
+    filter: drop-shadow(0 0 2px #FF6347);
+}
+#cancelBtn{
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #FFB6C1;
+    border: none;
+    filter: drop-shadow(0 0 2px #FF6347);
+}
+#writeBtn:hover{
+	cursor: pointer;
+}
+#cancelBtn:hover{
+	cursor: pointer;
+}
+#writeBtn:active{
+    filter: drop-shadow(0 0 5px #FF6347);
+}
+#cancelBtn:active{
+    filter: drop-shadow(0 0 5px #FF6347);
+}

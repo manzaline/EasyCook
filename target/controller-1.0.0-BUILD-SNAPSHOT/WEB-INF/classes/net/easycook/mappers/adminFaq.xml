@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="adminFaq">
+
+	<!-- 검색전후 공지목록 -->
+  <select id="adfaq_list" resultType="af">
+    select * from 
+     (select rowNum rNum,adminfaq_no,adminfaq_name,adminfaq_title,
+     adminfaq_date,adminfaq_cont
+     from (select * from adminFaq     
+     <where>
+     <if test="find_field == ''">
+      <!-- 검색조건이 없어서 총레코드 개수 -->
+     </if>
+     <if test="find_field == 'adminfaq_title'">
+      <!-- 검색 조건이 제목인 경우 -->
+      adminfaq_title like #{find_name} <!-- like는 오라클 검색
+      연산자 -->
+     </if>
+     <if test="find_field == 'adminfaq_cont'">
+      adminfaq_cont like #{find_name}
+     </if>
+     </where>     
+      order by adminfaq_no desc)) 
+     where rNum &gt;= #{startrow} and rNum &lt;= #{endrow}
+   <!-- &gt;은 ~보다 크다(>), &lt;은 ~보다 작다(<) -->  
+  </select> 
+
+	<!-- 검색 전후 레코드 개수 -->
+	<select id="adfaq_count" parameterType="af" resultType="int">
+		select count(adminfaq_no) from adminFaq
+		<where>
+			<if test="find_field == ''">
+				<!-- 검색조건이 없어서 총레코드 개수 -->
+			</if>
+			<if test="find_field == 'adminfaq_title'">
+				<!-- 검색 조건이 제목인 경우 -->
+				adminfaq_title like #{find_name} <!-- like는 오라클 검색 연산자 -->
+			</if>
+			<if test="find_field == 'adminfaq_cont'">
+				adminfaq_cont like #{find_name}
+			</if>
+		</where>
+	</select>
+
+	<insert id="adfaq_in" parameterType="af">
+		insert into adminFaq (adminfaq_no,adminfaq_name,adminfaq_title,
+		adminfaq_cont,adminfaq_date)
+		values(adminfaq_no_seq.nextval,#{adminfaq_name},#{adminfaq_title},
+		#{adminfaq_cont},sysdate)
+	</insert>
+	
+	<update id="adfaq_up">
+		update adminFaq set
+		adminfaq_title=#{adminfaq_title},
+		adminfaq_cont=#{adminfaq_cont} where
+		adminfaq_no=#{adminfaq_no}
+	</update>
+
+	<delete id="adfaq_del" >
+    	 delete from adminFaq where adminfaq_no=#{no}
+    </delete>
+    
+    <select id="adfaq_cont" resultType="af">
+    	select * from adminFaq where adminfaq_no=#{adminfaq_no}
+    </select>
+
+</mapper>
+ 

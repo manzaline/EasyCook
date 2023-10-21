@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="EasyCook:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cb17b07-cbe9-4f7d-bb9d-83e8ac028a8c" name="Changes" comment="" />
+    <list default="true" id="6cb17b07-cbe9-4f7d-bb9d-83e8ac028a8c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminFaqController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminFaqController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminHotNewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminHotNewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminNoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/AdminNoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/FaqController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/FaqController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/HotNewsBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/HotNewsBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/MyPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/MyPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/NotFaqController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/NotFaqController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/RecipeBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/RecipeBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/controller/admin_postController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/controller/admin_postController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminFaqDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminFaqDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminFaqDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminFaqDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminNotDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminNotDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminNotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/AdminNotDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/FaqDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/FaqDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/FaqDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/FaqDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/HotNewsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/HotNewsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/HotNewsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/HotNewsDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/MemberDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/MemberDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/MemberDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/MemberDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/NotDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/NotDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/NotDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/NotDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/RecipeBoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/RecipeBoardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/dao/RecipeBoardDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/dao/RecipeBoardDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminFaqService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminFaqService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminFaqServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminFaqServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminNotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminNotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminNotServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminNotServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/FaqService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/FaqService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/FaqServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/FaqServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/HotNewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/HotNewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/HotNewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/HotNewsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/MemberServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/MemberServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/NotService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/NotService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/NotServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/NotServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/RecipeBoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/RecipeBoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/service/RecipeBoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/service/RecipeBoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/AdminFaqVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/AdminFaqVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/AdminNoticeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/AdminNoticeVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/AdminVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/AdminVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/FaqBoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/FaqBoardVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/HotNewsBoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/HotNewsBoardVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/MemberVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/MemberVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/NoticeBoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/NoticeBoardVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/RecipeBoardCommentVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/RecipeBoardCommentVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/easycook/vo/RecipeBoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/easycook/vo/RecipeBoardVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pwdconv/PwdChange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pwdconv/PwdChange.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,15 +75,113 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectId" id="2UodoR7AVpW2D7tNhvJeoQwl00V" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.50" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.50" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/easycook/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="EasyCook:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/easycook" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="dab967d2-0d3a-4291-921a-978c436cbf23" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="4908" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="EasyCook:war exploded" />
+        </option>
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -32,6 +192,7 @@
       <option name="presentableId" value="Default" />
       <updated>1693610042639</updated>
       <workItem from="1693610044566" duration="4851000" />
+      <workItem from="1697876498278" duration="496000" />
     </task>
     <servers />
   </component>

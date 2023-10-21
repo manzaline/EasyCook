@@ -1,0 +1,99 @@
+@charset "UTF-8";
+body{
+	background-image:url('../images/picture/food_image.jpg');
+	background-repeat:no-repeat;
+	background-size:100% 100vh;
+}
+.search-form{
+	text-align:center;
+	padding:10px;
+	margin:0 0 0 0;
+}
+.search-form .hidden2{
+	font-size:200%;
+}
+.board_wrap{
+	margin-left:30%;
+	width:63%;
+	border-top : 1px solid #000;
+	border-bottom : 1px solid #000;
+	background-color:beige;
+}
+.board_title{
+	text-align:center;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:200%;
+
+}
+.board_write{
+	border-top: 2px solid #000;
+}
+
+.board_write .title{
+	padding:15px;
+	border-bottom: 1px solid #000;	
+}
+.board_write .title input[type="text"] {
+	padding:10px;
+}
+.board_write .title input[type="text"] {
+	width:150%;
+}
+
+.board_write .cont{
+	border-bottom: 1px solid #000;
+}
+.board_write .cont textarea{
+	display:block;
+	width:100%;
+	height:400px;
+	padding:15px;
+	box-sizing:border-box;
+	border: 0;
+	resize:vertical;
+}
+
+.board_write .title dt,
+.board_write .title dd{
+	display:inline-block;
+	vertical-align:middle;
+	font-size:1.4rem;
+}
+.board_write .title dt{
+	width:50px;
+}
+.search-form{
+	margin:0 5% 0 29%;
+}
+.buttonwrite{
+	width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.buttonwrite #save{
+	font-color:#ffffff;
+	margin-bottom:20px;
+	width:100px;
+    height:30px;
+    border:2px solid black;
+    font-weight: bold;
+    margin-right: 60px;
+    background-color: #000000;
+}
+.buttonwrite #cancel{
+	margin-bottom:20px;
+	width:100px;
+    height:30px;
+    border:2px solid black;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+#save:hover{
+	cursor:pointer;
+}
+#cancel:hover{
+	cursor:pointer;
+}

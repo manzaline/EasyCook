@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+      http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+      http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+      
+    <!-- aop 자동 프록시 설정 -->
+	<aop:aspectj-autoproxy/>
+
+	<!-- 스프링 JDBC -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="username" value="week"/>
+		<property name="password" value="week"/>
+	</bean>
+	
+	<!-- 스프링과 mybatis연결, mybatis 매퍼와 환경 설정 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/><!-- setter()를 통한 DI의존성 주입 -->
+		<property name="configLocation" value="classpath:/mybatis-config.xml"/>
+		<!-- mybatis-config.xml파일을 읽어옴. 이 파일은 데이터 저장 bean클래스의 객체 별칭을 관리 -->
+		<property name="mapperLocations" value="classpath:net/easycook/mappers/*.xml"/>
+		 <!--쿼리문을 다루는 매퍼 태그를 포함한 xml위치 -->
+	</bean>
+	
+	<!-- 트랜젝션 적용 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<!-- 트랜젝션 설정 애노테이션 -->
+	<tx:annotation-driven/>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+	<!-- destroy-method="clearCache" : 임시 메모리를 비워서 데이터베이스 연결을 해제 -->
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+		<!-- constructor-arg : 생성자를 통한 의존성 주입 -->
+	</bean>
+	
+	<!-- DAOImpl의 @Repository가 설정된 부분을 스프링에서 오토스캔하게 함 -->
+	<context:component-scan base-package="net.easycook.dao"/>
+	
+	<!-- 비즈니스 서비스 추가 -->
+	<!-- 서비스 추가 목적 -->
+	<!--  1. 컨트롤과 모델 DAO를 연결하는 중간 매개체 역할 -->
+	<!--  2. 고객의 추가 요구사항을 유연하게 반영할 수 있게 한다. -->
+	<!--  3. 스프링의 AOP를 통한 트랜젝션 적용의 핵심, 데이터의 일치성과 사이트의 신뢰도를 보장 -->
+	<context:component-scan base-package="net.easycook.service"/>
+	
+	<!-- aop 설정 -> AOP를 XML방식으로 설정 -->
+	<aop:config></aop:config>
+
+</beans> 
